@@ -13,7 +13,9 @@ public class AI_FSM : MonoBehaviour {
     private Health playerHealth;
 
     public float maxDamage = 10f;
-
+    
+  
+    
     // Enums to keep states
     public enum ENEMY_STATES { patrol, chase, attack }
 
@@ -80,8 +82,10 @@ public class AI_FSM : MonoBehaviour {
     }
     public IEnumerator EnemyChase () {
         print("Chasing");
+	
         while (currentState == ENEMY_STATES.chase)
         {
+		
             checkMyVision.sensitivity = CheckMyVision.Sensitivity.LOW;
             // agent.acceleration = 600;
 
@@ -116,6 +120,7 @@ public class AI_FSM : MonoBehaviour {
     public IEnumerator EnemyAttack () {
 
 		 print("Attacking enemy");
+	
         while (currentState == ENEMY_STATES.attack)
         {
             agent.isStopped = false;
@@ -133,6 +138,7 @@ public class AI_FSM : MonoBehaviour {
             else
             {
                 // Do something
+		
                 playerHealth.HealthPoints -= maxDamage ;
 
 				CurrentState = ENEMY_STATES.patrol;

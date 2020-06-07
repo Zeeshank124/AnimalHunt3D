@@ -24,6 +24,7 @@ public class Gun : MonoBehaviour
 
 	private AudioSource audio;
 	
+	
 	void Start()
 	{
 		audio=GetComponent<AudioSource>();
@@ -59,6 +60,7 @@ public class Gun : MonoBehaviour
     }
 	IEnumerator Reload()
 	{
+		
 		isReloading=true;
 		Debug.Log("Reloading...");
 		
