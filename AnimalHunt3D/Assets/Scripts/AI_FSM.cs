@@ -108,7 +108,7 @@ public class AI_FSM : MonoBehaviour {
                 }
                 else
                 {
-                    print("Sqwitching to Attack!!!!!");
+                    print("Attacking");
                     CurrentState = ENEMY_STATES.attack;
                 }
                 yield break;
