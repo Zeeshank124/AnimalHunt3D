@@ -17,14 +17,8 @@ public class LevelLoaderScript : MonoBehaviour
     }
     public void LoadNextLevel()
     {
-	StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex+1));
+	SceneManager.LoadScene("animalhuntkiramat");
 	
     }
-    IEnumerator LoadLevel(int levelIndex)
-    {
-	transition.SetTrigger("Start");
-	yield return new WaitForSeconds(transitionTime);
-	SceneManager.LoadScene(levelIndex);
-    	
-    }
+    
 }

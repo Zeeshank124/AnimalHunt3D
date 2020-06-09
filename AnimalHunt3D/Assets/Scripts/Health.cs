@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -17,13 +16,8 @@ public class Health : MonoBehaviour
 			if(healthPoints<=0)
 			{
 				Destroy(gameObject);
-				LoadGameOver();
 			}
 		}
-	}
-	public void LoadGameOver()
-	{
-		SceneManager.LoadScene("GameOverMenu");
 	}
 	[SerializeField]
 	private float healthPoints=100f;
